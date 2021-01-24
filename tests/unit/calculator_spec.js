@@ -37,11 +37,23 @@ describe('calculator', function () {
 
   it('it can concatenate mulitiple number button clicks', function(){
     calculator.runningTotal = 0;
-    calculator.numberClick(6)
-    calculator.numberClick(6)
-    calculator.numberClick(6)
-    assert.strictEqual(calculator.runningTotal, 666)
+    calculator.numberClick(6);
+    calculator.numberClick(6);
+    calculator.numberClick(6);
+    assert.strictEqual(calculator.runningTotal, 666);
   })
 
+  it('it can chain multiple operations together', function(){
+    calculator.runningTotal = 
+    calculator.previousOperator
+    calculator.operatorClick(+);
+    assert.strictEqual();
+  })
+
+  it('it can clear the running total without affecting the calculation', function() {
+    calculator.runningTotal = 9;
+    calculator.clearClick()
+    assert.strictEqual(calculator.runningTotal, 0);
+  })
 
 });
