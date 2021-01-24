@@ -44,10 +44,10 @@ describe('calculator', function () {
   })
 
   it('it can chain multiple operations together', function(){
-    calculator.runningTotal = 
-    calculator.previousOperator
-    calculator.operatorClick(+);
-    assert.strictEqual();
+    calculator.previousOperator = '+';
+    calculator.previousTotal = 4;
+    calculator.operatorClick('=');
+    assert.strictEqual(calculator.runningTotal, 4);
   })
 
   it('it can clear the running total without affecting the calculation', function() {
